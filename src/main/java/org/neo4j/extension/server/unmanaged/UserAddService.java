@@ -67,7 +67,7 @@ public class UserAddService
 
     @POST
     @Path("/{username}")
-    public Response setPassword( @PathParam("username") String username, @Context HttpServletRequest req, String payload )
+    public Response createUser( @PathParam("username") String username, @Context HttpServletRequest req, String payload )
     {
         Principal principal = req.getUserPrincipal();
         if ( principal == null || !principal.getName().equals( NEO4J_USER ) )
